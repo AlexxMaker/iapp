@@ -14,15 +14,19 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 
 // configure instagram app with client-id
-// we'll get to this soon
+ig.use({
+// get access token here: http://instagram.pixelunion.net/
+  access_token: '4177353830.1677ed0.aa6fa116c40542ed86e6eed1d176a6c3',
+});
+
 // SET THE ROUTES
 // ===================================================
-// home page route - our profile's images
+// home page route - popular images
 app.get('/', function (req, res) {
-        // use the instagram package to get our profile's media
-        // render the home page and pass in the our profile's images
-        res.render('pages/index');
+   ig.user_self_media_recent(function (err, medias, pagination, remaining, limit) {
+    res.render('pages/index', { grams: medias });
     });
+});
 
 // START THE SERVER
 // ==================================================
