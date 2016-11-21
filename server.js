@@ -23,8 +23,11 @@ ig.use({
 // ===================================================
 // home page route - popular images
 app.get('/', function (req, res) {
-   ig.user_self_media_recent(function (err, medias, pagination, remaining, limit) {
+   ig.media_popular(function (err, medias, pagination, remaining, limit) {
     res.render('pages/index', { grams: medias });
+    });
+    ig.user('user_id', function(err, result, remaining, limit) {
+
     });
 });
 

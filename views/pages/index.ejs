@@ -8,29 +8,30 @@
 
 <header>
     <% include ../partials/header %>
-    <h1>Welcome to your InstaApp!</h1>
+    
+    <h1>Hello, ! Welcome to your InstaApp!</h1>
+    
 </header>
 
 <main>
 <div class="row">
 <% grams.forEach(function(gram) { %>
 <div class="instagram-pic col-sm-3">
-        
-        <a href="<%= gram.link %>" target="_blank">
-        <img src="<%= gram.images.standard_resolution.url %>" class="img-responsive">
-        </a>
 
-    <div class="instagram-bar">
-        <div class="likes">
-            <span class="glyphicon glyphicon-heart">
-            </span><%= gram.likes.count %>
-        </div>
+  <a href="<%= gram.link %>" target="_blank">
+    <img src="<%= gram.images.standard_resolution.url %>" class="img-responsive">
+  </a>
 
-        <div class="comments">
-            <span class="glyphicon glyphicon-comment">
-            </span><%= gram.comments.count %>
-        </div>
+  <div class="instagram-bar">
+    <div class="likes">
+      <span class="glyphicon glyphicon-heart"></span> 
+      <%= gram.likes.count %>
     </div>
+    <div class="comments">
+      <span class="glyphicon glyphicon-comment"></span> 
+      <%= gram.comments.count %>
+    </div>
+  </div>
 
 </div>
 <% }); %>
