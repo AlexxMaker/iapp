@@ -18,6 +18,10 @@ footer {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
 }
 
+.instagram-pic img:hover {
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.8)
+}
+
 .instagram-bar {
     position: absolute;
     bottom: 30px;
@@ -38,4 +42,8 @@ footer {
 
 .instagram-bar .comments {
     float: right;
+}
+
+h1 {
+    text-align: center;
 }

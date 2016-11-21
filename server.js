@@ -16,7 +16,7 @@ app.set('view engine', 'ejs');
 // configure instagram app with client-id
 ig.use({
 // get access token here: http://instagram.pixelunion.net/
-  access_token: '4177353830.1677ed0.aa6fa116c40542ed86e6eed1d176a6c3',
+  access_token: '4177353830.1677ed0.4370aaecf9ea40acaf35ff4ded72e3b0',
 });
 
 // SET THE ROUTES
